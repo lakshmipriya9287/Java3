@@ -6,22 +6,13 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         
-        int intValue;
-        double doubleValue;
-        String strValue;
-
-        
-        intValue = sc.nextInt();
-        doubleValue = sc.nextDouble();
+        int i=sc.nextInt();
+        double d=sc.nextDouble();
         sc.nextLine();
-        strValue = sc.nextLine();
-
-        
-        System.out.println(intValue);
-        System.out.println(doubleValue);
-        System.out.println(strValue);
-
-        sc.close();
+        String s=sc.nextLine();
+        System.out.println(i);
+        System.out.println(d);
+        System.out.println(s);
+            
     }
 }
-
