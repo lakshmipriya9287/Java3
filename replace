@@ -7,11 +7,12 @@ public class Solution {
        Scanner sc=new Scanner(System.in);
         String S=sc.nextLine();
         String T=sc.nextLine();
+        int A=sc.nextInt();
+        int B=sc.nextInt();
         
+        StringBuffer sb=new StringBuffer(S);
         
-        StringBuilder sb=new StringBuilder(S);
-        
-        sb.replace(0,4,"C++"); 
-        System.out.println(sb);
+        sb.replace(A,B,T); 
+        System.out.print(sb);
     }
 }
