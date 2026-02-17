@@ -1,0 +1,46 @@
+import java.util.Scanner;
+
+class Employee {
+    String name;
+    double basicSalary;
+
+    
+    public Employee(String name, double basicSalary) {
+        this.name = name;
+        this.basicSalary = basicSalary;
+    }
+
+    
+    public double calculateSalary() {
+        double HRA = 0.20 * basicSalary; 
+        double DA = 0.10 * basicSalary;   
+        return basicSalary + HRA + DA;    
+    }
+
+
+    public void displaySalary() {
+        System.out.println("Name:" + name);
+        System.out.println("Total Salary:" + calculateSalary());
+    }
+}
+
+public class EmployeeSalaryCalculation {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        
+        String name = scanner.nextLine();
+        double basicSalary = scanner.nextDouble();
+
+
+        Employee employee = new Employee(name, basicSalary);
+
+    
+        employee.displaySalary();
+
+        scanner.close();
+    }
+}
+        
+        
+    
