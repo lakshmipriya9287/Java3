@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        
+        String S = sc.nextLine();
+        int start = sc.nextInt();
+        int end = sc.nextInt();
+        
+        String result = S.substring(0, start) + S.substring(end);
+
+        
+        System.out.println(result);
+
+        sc.close();
+    }
+}
