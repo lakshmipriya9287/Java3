@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class Main {
+
+    static boolean[] used = new boolean[26];
+
+    static String removeDuplicates(String str, String result) {
+        // Base case
+        if (str.length() == 0) {
+            return result;
+        }
+
+        char current = str.charAt(0);
+
+        // If character not used before, add to result
+        if (!used[current - 'a']) {
+            used[current - 'a'] = true;
+            result += current;
+        }
+
+        // Recursive call for remaining string
+        return removeDuplicates(str.substring(1), result);
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String str = sc.nextLine();
+
+        System.out.println(removeDuplicates(str, ""));
+    }
+}
