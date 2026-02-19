@@ -1,0 +1,47 @@
+import java.util.*;
+abstract class Notification {
+    abstract void send();
+}
+
+class EmailNotification extends Notification {
+    void send() {
+        System.out.println("Email notification sent");
+    }
+}
+
+class SMSNotification extends Notification {
+    void send() {
+        System.out.println("SMS notification sent");
+    }
+}
+
+class PushNotification extends Notification {
+    void send() {
+        System.out.println("Push notification sent");
+    }
+}
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String input = sc.nextLine();   // Case-sensitive
+
+        Notification n = null;
+
+        if (input.equals("Email")) {
+            n = new EmailNotification();
+        }
+        else if (input.equals("SMS")) {
+            n = new SMSNotification();
+        }
+        else if (input.equals("Push")) {
+            n = new PushNotification();
+        }
+
+        if (n != null) {
+            n.send();
+        }
+
+        sc.close();
+    }
+}
